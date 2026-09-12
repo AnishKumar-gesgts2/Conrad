@@ -1,0 +1,18 @@
+{
+  "name": "industrial_vertical_steel",
+  "fluid": {"density_kg_m3": 998.0, "bulk_modulus_pa": 2.2e9, "dynamic_viscosity_pa_s": 0.001},
+  "pipe": {
+    "length_m": 20.0,
+    "diameter_m": 0.15,
+    "wall_thickness_m": 0.006,
+    "youngs_modulus_pa": 2.0e11,
+    "poissons_ratio": 0.30,
+    "elevation_start_m": 0.0,
+    "elevation_end_m": 20.0,
+    "darcy_friction_factor": 0.022,
+    "grid_cells": 101
+  },
+  "operating": {"reference_head_m": 35.0, "outlet_flow_m3_s": 0.0},
+  "sensors": {"pressure_locations_m": [4.0, 10.0, 17.0], "pressure_noise_pa": 120.0, "bias_random_walk_pa_per_sqrt_s": 2.0},
+  "fault": {"leak_location_m": 12.0, "leak_area_m2": 1.2e-5, "discharge_coefficient": 0.62, "outside_head_m": 0.0}
+}

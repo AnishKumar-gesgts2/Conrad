@@ -1,0 +1,18 @@
+{
+  "name": "industrial_horizontal_pvc",
+  "fluid": {"density_kg_m3": 998.0, "bulk_modulus_pa": 2.2e9, "dynamic_viscosity_pa_s": 0.001},
+  "pipe": {
+    "length_m": 30.0,
+    "diameter_m": 0.15,
+    "wall_thickness_m": 0.010,
+    "youngs_modulus_pa": 3.0e9,
+    "poissons_ratio": 0.40,
+    "elevation_start_m": 0.0,
+    "elevation_end_m": 0.0,
+    "darcy_friction_factor": 0.025,
+    "grid_cells": 121
+  },
+  "operating": {"reference_head_m": 35.0, "outlet_flow_m3_s": 0.0},
+  "sensors": {"pressure_locations_m": [5.0, 15.0, 25.0], "pressure_noise_pa": 120.0, "bias_random_walk_pa_per_sqrt_s": 2.0},
+  "fault": {"leak_location_m": 18.0, "leak_area_m2": 1.2e-5, "discharge_coefficient": 0.62, "outside_head_m": 0.0}
+}
