@@ -8,6 +8,7 @@ sys.path.insert(0, str(ROOT))
 
 from hydrosim.config import load_config
 from hydrosim.inference import score_leak_candidates
+from hydrosim.observables import compute_observables, save_observables_npz
 from hydrosim.physics import PipeModel
 from hydrosim.plotting import plot_result
 from hydrosim.sensors import add_sensor_effects
@@ -38,6 +39,8 @@ def main() -> None:
         truth_model.dt_s,
         RANDOM_SEED,
     )
+    observables = compute_observables(truth, truth_model, measured)
+    save_observables_npz(observables, OUTPUT_DIR / "simulation_observables.npz")
 
     def candidate_model(location_m: float, area_m2: float) -> PipeModel:
         candidate_config = config.__class__(
@@ -69,6 +72,7 @@ def main() -> None:
     print(f"Best baseline candidate: location={best.location_m:.2f} m, area={best.area_m2:.3e} m^2")
     plot_result(truth, measured, OUTPUT_DIR)
     print(f"Plot written to {OUTPUT_DIR / 'transient_response.png'}")
+    print(f"Saved {len(observables)} theoretical and sensor observables to simulation_observables.npz")
 
 
 if __name__ == "__main__":

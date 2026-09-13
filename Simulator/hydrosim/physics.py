@@ -17,6 +17,7 @@ class SimulationResult:
     sensor_pressure_pa: np.ndarray
     leak_flow_m3_s: np.ndarray
     wave_speed_m_s: float
+    elevation_m: np.ndarray
 
 
 class PipeModel:
@@ -101,4 +102,13 @@ class PipeModel:
         pressure = self.config.fluid.density_kg_m3 * 9.80665 * (
             heads[:, sensor_indices] - self.elevation_m[sensor_indices]
         )
-        return SimulationResult(times, self.position_m, heads, flows, pressure, leak_flows, self.wave_speed_m_s)
+        return SimulationResult(
+            times,
+            self.position_m,
+            heads,
+            flows,
+            pressure,
+            leak_flows,
+            self.wave_speed_m_s,
+            self.elevation_m.copy(),
+        )

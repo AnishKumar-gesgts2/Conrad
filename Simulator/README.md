@@ -53,6 +53,10 @@ The Method of Characteristics advances the pressure head \(H\) and flow \(Q\). T
 
 This is a research simulator, not a safety-certified hydraulic design tool.
 
+## Tracked observables
+
+Every run can export a compressed `.npz` archive containing the full simulated state and derived quantities, including pressure head, total hydraulic head, pressure, flow, velocity, temporal and spatial derivatives, material acceleration, velocity head, total energy head, hydraulic power, dynamic pressure, wave impedance, wave-energy proxy, right- and left-traveling characteristic components, leak flow, leakage fraction, continuity and momentum-equation residuals, sensor predictions, sensor residuals, and residual z-scores. Some are directly measurable; others are theoretical state variables or model diagnostics that may be useful for calibration and future estimator design.
+
 ## Planned extensions
 
 1. Graph-based junctions and branched networks.
