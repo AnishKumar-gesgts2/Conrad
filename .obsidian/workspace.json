@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Simulator/README.md",
+                "file": "PRODUCT_DESCRIPTION.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "PRODUCT_DESCRIPTION"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Simulator/README.md",
+                "file": "PRODUCT_DESCRIPTION.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Simulator/README.md",
+                "file": "PRODUCT_DESCRIPTION.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Simulator/README.md",
+                "file": "PRODUCT_DESCRIPTION.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,6 +190,7 @@
   },
   "active": "04436d3aca530a26",
   "lastOpenFiles": [
+    "Simulator/README.md",
     "PRODUCT_DESCRIPTION.md"
   ]
 }
